@@ -1,0 +1,43 @@
+@use 'sass:color';
+
+$green: #50806B;
+$bggreen: #e8edde;
+$lgreen: #5bc08A;
+$black: #000;
+$red: #d11f1f;
+$textgrey: #7C8087;
+$white: #fff;
+
+.green-bg {
+    background-color: $green;
+    width: 100%;
+    min-height: 45px;
+    color: $white;
+
+    .banner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 600;
+        min-height: inherit;
+        position: relative;
+
+        &-text {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &-currency {
+            cursor: pointer;
+            font-weight: 400;
+        }
+
+        &-support {
+            margin-left: 40px;
+            color: $white;
+        }
+    }
+}

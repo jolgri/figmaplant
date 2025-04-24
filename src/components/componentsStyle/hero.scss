@@ -1,0 +1,50 @@
+.leaf {
+    background-image: url('../../assets/hero-plant-l.png'), url('../../assets/hero-plant-r.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: left bottom -20px, right bottom;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.hero {
+    min-height: 710px;
+    // background-image: url('../../assets/hero-plant-l.png'), url('../../assets/hero-plant-r.png');
+    // background-repeat: no-repeat, no-repeat;
+    // background-position: left bottom -20px, right bottom;
+    // max-width: 1800px;
+    // margin: 0 auto;
+
+    &-mid {
+        background: rgba(80, 128, 107, 0.2);
+        backdrop-filter: blur(20px);
+        min-height: inherit;
+        margin: 0 auto;
+        max-width: 590px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .main-title {
+            font-weight: 600;
+            // font-size: 80px;
+            font-size: clamp(40px, 10vw, 80px);
+            line-height: 1;
+            letter-spacing: 0.03em;
+        }
+
+        .slogan {
+            font-weight: 400;
+            font-size: clamp(16px, 3vw, 22px);
+            line-height: 1.5;
+            max-width: 430px;
+            margin: 27px 0 38px 0;
+        }
+    }
+}
+
+.dark-line {
+    background-color: $green;
+    min-height: 40px;
+}
