@@ -23,7 +23,7 @@ export default function PlantCardList({ filterType, limit }) {
             <DataHandler loading={loading} error={error}>
                 {
                     filteredPlants.map(p => (
-                        <PlantCard key={p.id} imageSrc={p.imageSrc} title={p.title} price={p.price} />
+                        <PlantCard key={p.id} imageSrc={p.imageSrc} title={p.title} price={p.price} discount={p.discount} />
                     ))
                 }
             </DataHandler>

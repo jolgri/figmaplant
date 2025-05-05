@@ -1,0 +1,39 @@
+.test-card {
+    background-color: $white;
+    padding: 32px;
+    max-width: 340px;
+    width: 100%;
+    box-shadow: 0px 4px 24px rgba(139, 167, 178, 0.16);
+    border-radius: 8px;
+
+    .star {
+        font-size: 24px;
+        color: #e1dede;
+    }
+
+    .star.full {
+        color: $green;
+    }
+
+    .star.half {
+        color: $green;
+        background: linear-gradient(to right, $green 50%, #e1dede 50%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .client-text {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 1.5;
+        width: 87%;
+        margin: 20px auto 6px auto;
+
+    }
+
+    .client-name {
+        font-size: 18px;
+        line-height: 1.5;
+        color: $textgrey;
+    }
+}

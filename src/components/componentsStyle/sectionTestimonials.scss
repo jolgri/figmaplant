@@ -1,0 +1,26 @@
+.test-section {
+    padding: 80px 0 60px;
+    text-align: center;
+
+    .test-title {
+        font-weight: 400;
+        font-size: 56px;
+        line-height: 62px;
+        letter-spacing: -2.4px;
+    }
+
+    .client-text {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.5;
+        letter-spacing: 0.1px;
+        margin-bottom: 20px auto;
+    }
+
+    .client-name {
+        font-size: 18px;
+        line-height: 1.5;
+        color: $textgrey;
+
+    }
+}

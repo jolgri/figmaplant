@@ -4,6 +4,11 @@ import Hero from "./components/Hero";
 import SectionCategories from "./components/SectionCategories";
 import SectionBest from "./components/SectionBest";
 import SectionHot from "./components/SectionHot";
+import SectionDeals from "./components/SectionDeals";
+import SectionTestimonials from "./components/SectionTestimonials";
+import Footer from "./components/Footer";
+
+
 function App() {
 
   return (
@@ -14,6 +19,9 @@ function App() {
       <SectionCategories />
       <SectionBest />
       <SectionHot />
+      <SectionDeals />
+      <SectionTestimonials />
+      <Footer />
     </>
   );
 }
