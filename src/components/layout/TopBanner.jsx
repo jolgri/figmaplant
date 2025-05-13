@@ -1,4 +1,4 @@
-import './componentsStyle/topBanner.scss';
+import '../componentsStyle/topBanner.scss';
 
 export default function TopBanner() {
     return (

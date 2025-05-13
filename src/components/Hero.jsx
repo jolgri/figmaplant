@@ -10,7 +10,7 @@ export default function Hero() {
                         <div className="hero-mid">
                             <h1 className="main-title">Plants are our Passion</h1>
                             <p className="slogan">Even if you don’t have a green thumb, you can still have a green home.</p>
-                            <Button className={'white-btn'} children={'Get Planting'} />
+                            <Button className={'white-btn'} children={'Get Planting'} to='/products' />
                         </div>
                     </div>
                 </div>

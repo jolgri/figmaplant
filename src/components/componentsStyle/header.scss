@@ -25,6 +25,11 @@ $white: #fff;
             margin: 0 32px;
         }
 
+        &-nav a:active {
+            color: $green;
+            text-decoration: underline;
+        }
+
         &-side {
             display: flex;
             align-items: baseline;

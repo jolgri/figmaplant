@@ -1,0 +1,35 @@
+.products-container {
+    display: flex;
+    margin-top: 85px;
+
+    .aside {
+
+        flex: 1;
+
+    }
+
+    .cards-container {
+
+        flex: 3;
+
+        .sort-block {
+            font-size: 14px;
+            margin-right: 0;
+            margin-left: auto;
+            max-width: 250px;
+            color: $textgrey;
+            border: 1px solid $textgrey;
+            padding: 0 10px;
+
+            .sort {
+                padding: 10px;
+                border: none;
+                outline: none;
+                font-family: Poppins;
+                font-weight: 600;
+            }
+
+        }
+
+    }
+}

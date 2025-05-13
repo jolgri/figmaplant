@@ -13,6 +13,10 @@
             padding: 5px;
             display: inline-block;
         }
+
+        a.active {
+            color: $green;
+        }
     }
 
     .social-icons {

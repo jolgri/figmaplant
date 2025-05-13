@@ -34,3 +34,17 @@ $white: #fff;
 .dark-bg {
     background-color: $green;
 }
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.example {
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    text-align: center
+}
