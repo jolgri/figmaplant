@@ -5,7 +5,7 @@ import {ghPages} from 'vite-plugin-gh-pages';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(),ghPages()],
-  base: '/figmaplant.git/',
+  base: '/figmaplant/',
   css: {
     preprocessorOptions: {
       scss: {
