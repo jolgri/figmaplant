@@ -1,16 +1,16 @@
 import './componentsStyle/CategoryFilter.scss';
 import useCategories from '../hooks/useCategories';
-import { useState } from 'react';
+// import { useState } from 'react';
 
-export default function CategoryFilter({ onCategoryChange }) {
+export default function CategoryFilter({ onCategoryChange, selectedCategories }) {
 
     const { categories } = useCategories();
 
-    const [selectedCategories, setSelectedCategories] = useState([]);
+    // const [selectedCategories, setSelectedCategories] = useState([]);
 
     const handleChange = categoryId => {
         if (categoryId === 'all') {
-            setSelectedCategories([]);
+            // setSelectedCategories([]);
             onCategoryChange([]);
             return;
         }
@@ -18,7 +18,7 @@ export default function CategoryFilter({ onCategoryChange }) {
             ? selectedCategories.filter(id => id !== categoryId)
             : [...selectedCategories, categoryId];
 
-        setSelectedCategories(updateCategories);
+        // setSelectedCategories(updateCategories);
         onCategoryChange(updateCategories);
     }
 

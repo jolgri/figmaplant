@@ -4,7 +4,7 @@ import DataHandler from '../utils/DataHandler';
 import './componentsStyle/plantCardList.scss';
 import PlantCard from './PlantCard';
 
-export default function PlantCardList({ filterType = '', limit = 0, selectedCategories = [] }) {
+export default function PlantCardList({ filterType = '', limit = 0, selectedCategories = [], priceRange = [0, Infinity] }) {
     const { plants, loading, error } = usePlants();
     const location = useLocation();
 
@@ -18,7 +18,13 @@ export default function PlantCardList({ filterType = '', limit = 0, selectedCate
                 selectedCategories.includes(plant.categoryId)
             );
         }
+        //filtravimas pagal kainą
+        filtered = filtered.filter(plant => {
+            const discountedPrice = plant.price * (1 - plant.discount / 100);
+            return (discountedPrice >= priceRange[0] &&
+                discountedPrice <= priceRange[1]);
 
+        })
         //rikiavimas (angl. sort)
         if (filterType === 'hot') {
             filtered.sort((a, b) => b.rating - a.rating);
@@ -52,10 +58,15 @@ export default function PlantCardList({ filterType = '', limit = 0, selectedCate
             <div className='plant-card-list'>
                 <DataHandler loading={loading} error={error}>
                     {
-                        filteredPlants.map(p => (
-                            <PlantCard key={p.id} imageSrc={p.imageSrc} title={p.title} price={p.price} discount={p.discount} plantId={p.id} />
-                        ))
-                    }
+                        filteredPlants.length === 0 ? (
+                            <p>Your search did not match any selection criteria</p>
+                        ) : (
+
+
+                            filteredPlants.map(p => (
+                                <PlantCard key={p.id} imageSrc={p.imageSrc} title={p.title} price={p.price} discount={p.discount} plantId={p.id} />
+                            ))
+                        )}
                 </DataHandler>
 
             </div>

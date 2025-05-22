@@ -8,7 +8,7 @@ import { CategoriesProvider } from './context/CategoriesContext.jsx'
 createRoot(document.getElementById('root')).render(
   <PlantsProvider>
     <CategoriesProvider>
-      <BrowserRouter>
+      <BrowserRouter basename='/figmaplant.git'>
         <App />
       </BrowserRouter>
     </CategoriesProvider>

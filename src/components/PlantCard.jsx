@@ -5,10 +5,21 @@ import Image from './Image';
 
 export default function PlantCard({ imageSrc, title, price, discount, plantId }) {
 
-    const discountedPrice = discount ? (price - (1 - discount / 100)).toFixed(2) : price.toFixed(2);
+    const discountedPrice = discount
+        ? (price - (1 - discount / 100)).toFixed(2)
+        : price.toFixed(2);
+
+    const plantData = {
+        title,
+        plantId,
+        price,
+        discount,
+        discountedPrice
+    }
+
     return (
         <div className='plant-card'>
-            <Link to={`/products/${plantId}`} className="plant-card-link">
+            <Link to={`/products/${plantId}`} className="plant-card-link" state={plantData}>
                 <div className='image-box'>
                     {
                         discount > 0 && (

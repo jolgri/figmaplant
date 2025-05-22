@@ -1,0 +1,69 @@
+.priceFilter {
+    margin: 30px 30px 30px 15px;
+    padding: 15px;
+    background-color: $white;
+    border: 1px solid #e3e5e6;
+    box-shadow: 0px 8px 23px rgba(80, 107, 82, 0.13);
+    border-radius: 10px;
+
+    details {
+        margin-top: 15px;
+
+        summary {
+            font-size: 16px;
+            font-weight: 600;
+            color: $black;
+            cursor: pointer;
+            padding: 10px 0;
+        }
+
+        .priceDropDown {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            label {
+                font-weight: 600;
+                font-size: 14px;
+                color: $black;
+            }
+
+            .rc-slider {
+                height: 0.5rem;
+                padding: 0 0.2rem;
+            }
+
+            .rc-slider-rail {
+                background-color: #ccc;
+                height: 0.5rem;
+                border-radius: 0.25rem;
+            }
+
+            .rc-slider-track {
+                background-color: $green;
+                height: 0.5rem;
+                border-radius: 0.25rem;
+            }
+
+            .rc-slider-handle {
+                width: 1.2rem;
+                height: 1.2rem;
+                margin-top: -0.35rem;
+                border: 2px solid $green;
+                background-color: $white;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+                cursor: grab;
+
+                &:focus {
+                    outline: none;
+                    box-shadow: 0 0 0 4px rgba(0, 128, 0, 0.2);
+                }
+            }
+
+            .rc-slider-handle-dragging {
+                border-color: darkgreen;
+                box-shadow: 0 0 0 4px rgba(0, 128, 0, 0.3);
+            }
+        }
+    }
+}
